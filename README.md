@@ -23,3 +23,6 @@ Implemente um script que armazene as características preenchidas no formulário
     - carros que rodam entre 30.000 e 50.000 km/ano – 100% do valor_fipe
     - carros que rodam mais que 50.000 km/ano – 90% do valor_fipe
 Preenchidos os campos os métodos criados devem ser utilizados para exibir quantos anos o veículo tem de utilização juntamente com seu valor de mercado.
+
+## Semana 4 - atividade
+Realizar um formulário de cadastro com nome, email, data de nascimento, telefone fixo e celular, matrícula e opção para seleção de aluno/professor. Para aluno, cadastrar o curso e para professor, cadastrar a área e link para o cv Lattes. Exibir os dados na tela após cadastro.
