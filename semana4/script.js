@@ -127,6 +127,7 @@ document.getElementById("enviar").addEventListener('click', function() {
     }
 });
 
-document.getElementById("redefinir").addEventListener('click', function() {
-    location.reload();
+document.getElementById("redefinir").addEventListener("click", function () {
+    document.getElementById("formCamposExtras").innerHTML = "";
+    document.getElementById("resultado").textContent = "";
 });
