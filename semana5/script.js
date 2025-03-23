@@ -22,7 +22,6 @@ function interface() {
     botaoReset.onclick = resetContador;
     totalContainer.appendChild(divTitulo);
     totalContainer.appendChild(botaoReset);
-
     contador.appendChild(totalContainer);
 
     let totalBoxDiv = document.createElement("div");
@@ -37,60 +36,60 @@ function interface() {
     secaoHomensMulheres.setAttribute("id", "secao-homens-mulheres");
     contador.appendChild(secaoHomensMulheres);
     
-    adicionarSecao("homens", "images/male.png", "Homens");
-    adicionarSecao("mulheres", "images/female.png", "Mulheres");
+    adicionarSecao("homens", "images/homem.png", "Homens");
+    adicionarSecao("mulheres", "images/mulher.png", "Mulheres");
 }
 
 function adicionarSecao(id, imgSrc, label) {
-    let divRow = document.createElement("div");
-    divRow.setAttribute("class", "row");
-    
+    let divSecao = document.createElement("div");
+    divSecao.setAttribute("class", "secao");
+
     let imagem = document.createElement("img");
     imagem.src = imgSrc;
     imagem.setAttribute("class", "icon");
-    divRow.appendChild(imagem);
-    
+    divSecao.appendChild(imagem);
+
+    let divRowButtons = document.createElement("div");
+    divRowButtons.setAttribute("class", "row-buttons");
     let botaoMais = document.createElement("button");
     let plus = document.createElement("img");
     plus.src = "images/mais.jpg";
     plus.setAttribute("class", "plus");
     botaoMais.appendChild(plus);
-    botaoMais.onclick = () => alterarContagem(id, 1);
-    divRow.appendChild(botaoMais);
-    
+    botaoMais.onclick = function () {
+        alterarContagem(id, 1);
+    };
+    divRowButtons.appendChild(botaoMais);
+
     let botaoMenos = document.createElement("button");
     let minus = document.createElement("img");
     minus.src = "images/menos.jpg";
     minus.setAttribute("class", "minus");
     botaoMenos.appendChild(minus);
-    botaoMenos.onclick = () => alterarContagem(id, -1);
-    divRow.appendChild(botaoMenos);
-    
+    botaoMenos.onclick = function () {
+        alterarContagem(id, -1);
+    };
+    divRowButtons.appendChild(botaoMenos);
+
     let labelElement = document.createElement("h5");
     labelElement.textContent = label;
-    divRow.appendChild(labelElement);
-    
+
     let countBoxDiv = document.createElement("div");
     countBoxDiv.setAttribute("class", "count-box");
     let countBox = document.createElement("div");
     countBox.id = id;
     countBox.textContent = id === "homens" ? homens : mulheres;
     countBoxDiv.appendChild(countBox);
-    divRow.appendChild(countBoxDiv);
 
-    // let totalBoxDiv = document.createElement("div");
-    // totalBoxDiv.setAttribute("class", "count-box");
-    // let totalBox = document.createElement("div");
-    // totalBox.id = "total";
-    // totalBox.textContent = total;
-    // totalBoxDiv.appendChild(totalBox);
-    // contador.appendChild(totalBoxDiv);
-    
-    document.getElementById("secao-homens-mulheres").appendChild(divRow);
+    divSecao.appendChild(divRowButtons);
+    divSecao.appendChild(labelElement);
+    divSecao.appendChild(countBoxDiv); 
+
+    document.getElementById("secao-homens-mulheres").appendChild(divSecao);
 }
 
-function alterarContagem(tipo, valor) {
-    if (tipo === 'homens') {
+function alterarContagem(genero, valor) {
+    if (genero === 'homens') {
         homens = Math.max(0, homens + valor);
     } else {
         mulheres = Math.max(0, mulheres + valor);
@@ -112,6 +111,4 @@ function atualizarInterface() {
     document.getElementById('total').textContent = total;
 }
 
-window.onload = function() {
-    interface();
-};
+interface();
