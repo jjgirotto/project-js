@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="http://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="http://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="container">
+    <div id="root"></div>
+    <script type="text/babel">        
+        function MeuElemento({letreiro}) {
+            return <h1>{letreiro}</h1>
+        }
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        let i = 0;
+        let frase = "Venha estudar na Fatec";
+        function tick() {            
+            if (i < frase.length) {
+                root.render(<MeuElemento letreiro = {frase.substring(0, i+1)} />);
+                i++;
+            } else i = 0;
+        }
+        setInterval(tick, 300);
+    </script>
+</body>
+</html>
