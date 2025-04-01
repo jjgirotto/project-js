@@ -53,7 +53,7 @@ function adicionarSecao(id, imgSrc, label) {
     divRowButtons.setAttribute("class", "row-buttons");
     let botaoMais = document.createElement("button");
     let plus = document.createElement("img");
-    plus.src = "image/mais.JPG";
+    plus.src = "images/mais.JPG";
     plus.setAttribute("class", "plus");
     botaoMais.appendChild(plus);
     botaoMais.onclick = function () {
