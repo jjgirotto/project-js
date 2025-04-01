@@ -53,7 +53,7 @@ function adicionarSecao(id, imgSrc, label) {
     divRowButtons.setAttribute("class", "row-buttons");
     let botaoMais = document.createElement("button");
     let plus = document.createElement("img");
-    plus.src = "images/mais.jpg";
+    plus.src = "image/mais.JPG";
     plus.setAttribute("class", "plus");
     botaoMais.appendChild(plus);
     botaoMais.onclick = function () {
@@ -63,7 +63,7 @@ function adicionarSecao(id, imgSrc, label) {
 
     let botaoMenos = document.createElement("button");
     let minus = document.createElement("img");
-    minus.src = "images/menos.jpg";
+    minus.src = "images/menos.JPG";
     minus.setAttribute("class", "minus");
     botaoMenos.appendChild(minus);
     botaoMenos.onclick = function () {
