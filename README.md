@@ -26,3 +26,12 @@ Preenchidos os campos os métodos criados devem ser utilizados para exibir quant
 
 ## Semana 4 - atividade
 Realizar um formulário de cadastro com nome, email, data de nascimento, telefone fixo e celular, matrícula e opção para seleção de aluno/professor. Para aluno, cadastrar o curso e para professor, cadastrar a área e link para o cv Lattes. Exibir os dados na tela após cadastro.
+
+## Semana 5 - atividade
+Implemente uma página HTML contendo apenas uma div na qual um contador de pessoas deve ser gerado por meio de JavaScript, ou seja, todos os elementos do contador devem ser criados e formatados com JavaScript.
+
+## Semana 6 - atividade
+Implemente uma página HTML contendo apenas uma div na qual uma calculadora deve ser gerada por meio de JavaScript, ou seja, todos os elementos da calculadora devem ser criados e formatados com JavaScript.
+
+## Semana 7 - atividade
+Implemente uma página HTML com um componente React que simule um letreiro com o texto "Venha estudar na Fatec". O texto deve aparecer letra a letra na página como se estivesse sendo digitado.
